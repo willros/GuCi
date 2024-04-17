@@ -6,6 +6,12 @@ Small script/lib for calculating GC content
 ```console
 $ python3 guci.py
 ```
+### Dependencies
+```console
+$ pip install pyfastx
+$ pip install polars
+$ pip install matplotlib
+```
 
 ## Usage
 ```
