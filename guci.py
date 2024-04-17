@@ -58,7 +58,7 @@ def make_dir(outpath: str) -> None:
 
 
 def cli():
-    parser = argparse.ArgumentParser(description="GC content")
+    parser = argparse.ArgumentParser(description="Plot GC content of genomes.")
     parser.add_argument("-f", "--fasta", required=True, help="Fasta file")
     parser.add_argument(
         "-w",
