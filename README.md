@@ -22,3 +22,7 @@ options:
   -o OUT_FOLDER, --out_folder OUT_FOLDER
                         Output folder
 ```
+
+## Contribute
+* Please give the repo a star!
+* PR´s are welcome!
