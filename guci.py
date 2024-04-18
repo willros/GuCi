@@ -74,17 +74,26 @@ def cli():
         default=".",
         help="Output folder",
     )
+    parser.add_argument(
+        "-p",
+        "--plot_type",
+        required=False,
+        default="pdf",
+        choices=["png", "pdf"],
+        help="How to save the plots",
+    )
 
     args = parser.parse_args()
 
     main(
         fasta=args.fasta,
         window=args.window,
-        out_folder=args.out_folder
+        out_folder=args.out_folder,
+        plot_type=args.plot_type
     )
 
 
-def main(fasta, window, out_folder):
+def main(fasta, window, out_folder, plot_type):
 
     df = fastx_file_to_df(fasta)
     df = add_gc(df)
@@ -94,7 +103,7 @@ def main(fasta, window, out_folder):
     plot = plot_gc(df, title)
 
     make_dir(out_folder)
-    out_name = f"{out_folder}/gc_{Path(fasta).stem}.pdf"
+    out_name = f"{out_folder}/gc_{Path(fasta).stem}.{plot_type}"
     plot.savefig(out_name)
 
 

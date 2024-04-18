@@ -8,14 +8,15 @@ $ python3 guci.py
 ```
 ### Dependencies
 ```console
-$ pip install pyfastx
-$ pip install polars
-$ pip install matplotlib
+$ # pyfastx
+$ # polars
+$ # matplotlib
+$ pip install -r requirements.txt
 ```
 
 ## Usage
 ```
-usage: guci.py [-h] -f FASTA -w WINDOW [-o OUT_FOLDER]
+usage: guci.py [-h] -f FASTA -w WINDOW [-o OUT_FOLDER] [-p {png,pdf}]
 
 Plot GC content of genomes.
 
@@ -27,7 +28,12 @@ options:
                         Size of sliding window
   -o OUT_FOLDER, --out_folder OUT_FOLDER
                         Output folder
+  -p {png,pdf}, --plot_type {png,pdf}
+                        How to save the plots
 ```
+
+## Example
+[example](examples/gc_ua159.png)
 
 ## Contribute
 * Please give the repo a star!
