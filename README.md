@@ -33,7 +33,7 @@ options:
 ```
 
 ## Example
-[example](examples/gc_ua159.png)
+![example](examples/gc_ua159.png)
 
 ## Contribute
 * Please give the repo a star!
